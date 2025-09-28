@@ -12,6 +12,21 @@ You'll need a
 
 ![TT Demo board with ECP5 Breakout](_assets/TT_FPGA.jpg)
 
-## Demonstration running on the TT FPGA Breakout Board :
+## Build and Program
+While in the source directory do this -
+```bash
+cd ./programmer
+make
+make prog
+```
+
+You can also manually take the bit-file(from above make process) and feed to programmer.
+
+```bash
+python -m mpremote connect COM20 mount . + exec "import os; os.chdir('/remote'); import ecp_prog; ecp_prog.execute('spi_7seg.bit')"
+```
+
+
+When you're done, this is how it is supposed to show output -
 
 ![webp](_assets/spi_7segment_tt.webp)
