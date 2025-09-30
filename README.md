@@ -37,3 +37,6 @@ Copy micropython i.e. ``micropython/main.py`` to micropython filesystem. Use Tho
 When you're done, this is how it is supposed to show output -
 
 ![webp](_assets/spi_7segment_tt.webp)
+
+## Note
+Do adjustments in verilog for ``negedge`` block describing ``rst_n`` and ``sclk`` signals. This is only to get it working on a higher clock or different FPGA altogether.
